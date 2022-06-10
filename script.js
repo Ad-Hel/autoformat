@@ -75,36 +75,13 @@ function showEditable(e){
   showFormated();
 }
 
-function showFormatedOld(){
-    const boldStart = /(\s\*\*)|(\A\*\*)/g;
-    const boldEnd = /(\*\*\s)|(\*\*\Z)/g;
-    const preFormated = '<p>' + editableText.value.replaceAll(boldStart, ' <b>') + '</p>';
-    const formated = preFormated.replaceAll(boldEnd, '</b> ')
-    console.log(formated);
-    clearFormated();
-    formatedText.insertAdjacentHTML('afterbegin', formated)
-}
-
 function showFormated(){
     let text = editableText.value;
     while (text.search(/\*\*/g) > 0){
         text = text.replace(/\*\*/, '<b>')
         text = text.replace(/\*\*/, '</b>')
     };
-    // clearFormated();
-    // formatedText.insertAdjacentHTML('afterbegin', text);
     formatedText.innerHTML = text;
-}
-
-function clearFormated(){
-    const formatedChildren = Array.from(formatedText.children);
-    console.log(formatedChildren);
-    if (formatedChildren.length < 1){
-        return;
-    }
-    formatedChildren.forEach((child) =>  {
-        child.remove();
-    })
 }
 
 // Event listeners
