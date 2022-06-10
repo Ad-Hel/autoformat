@@ -3,8 +3,14 @@
     flex-direction: column;
     max-width: 600px;
     margin: 0 auto;
-  }
+}
 .container textarea{
   height: 10rem;
   margin-bottom: 2rem;
+}
+.container div{
+  height: 10rem;
+  margin-bottom: 2rem;
+  box-shadow: 2px 2px 2px rgba(0,0,0, 0.25);
+  border: solid 0.1px rgba(0,0,0, 0.25);
 }
