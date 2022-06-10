@@ -1,0 +1,10 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+.container textarea{
+  height: 10rem;
+  margin-bottom: 2rem;
+}
